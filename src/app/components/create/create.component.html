@@ -1,3 +1,11 @@
-<p>
-  create works!
-</p>
+<div class="container">
+<h2>{{title}}</h2>
+
+<form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+  <p>
+    <label for = "name">Nombre</label>
+    <input type="text" name="name" #name="ngModel"[(ngModel)]="project.name">
+  </p>
+</form>
+
+</div>

@@ -8,6 +8,8 @@ import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { routing, appRoutingProviders } from './app.routing';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,15 @@ import { routing, appRoutingProviders } from './app.routing';
     CreateComponent,
     ContactComponent,
     ErrorComponent,
+    FormsModule,
+    HttpClientModule
+  
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
